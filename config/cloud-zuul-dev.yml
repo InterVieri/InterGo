@@ -1,0 +1,14 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8760/eureka/
+server:
+  port: 8763
+spring:
+  application:
+    name: lxy-zuul
+zuul:
+  routes:
+    consumer-1:
+      path: consumer-1/**
+      serviceId: cloud-consumer
